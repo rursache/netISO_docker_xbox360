@@ -1,6 +1,6 @@
 # NetISO Xbox 360 wine docker container
 
-Stop wasting time converting (decompressing) 360 ISOs to GOD and mount the ISOs directly!
+Stop wasting time converting (decompressing) 360 ISOs and mount them directly over the network!
 
 #### Linux/macOS supported!
 
@@ -25,3 +25,9 @@ or build it yourself:
 ```sh
 docker build -t netiso360 .
 ```
+
+## Windows?
+Simply run the `server.exe` inside the folder where your ISOs are
+
+## Credits
+[ConfusionRS](https://www.reddit.com/user/ConfusionRS/) for the NetISO implementation and Windows binary

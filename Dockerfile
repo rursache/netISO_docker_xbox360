@@ -5,7 +5,7 @@ FROM ${BASE_IMAGE}
 RUN mkdir -p /opt/app /wineprefix /data
 
 # Copy your Windows CLI binary into the image
-COPY --chmod=755 server.exe /opt/app/server.exe
+COPY --chmod=755 netiso/server.exe /opt/app/server.exe
 
 # Wine env: quiet logs, skip menu builder noise, set prefix
 ENV WINEPREFIX=/wineprefix \
