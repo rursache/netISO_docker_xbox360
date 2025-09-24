@@ -2,14 +2,15 @@
 
 Stop wasting time converting (decompressing) 360 ISOs to GOD and mount the ISOs directly!
 
-Linux/macOS supported!
+#### Linux/macOS supported!
+
+## How?
 
 Point the `/games` volume to your folder of 360 ISOs and follow the [NetISO](https://consolemods.org/wiki/Xbox_360:Playing_Games_over_Network_(NetISO)) instructions ([mirror](wiki.pdf))
 
-```sh
-docker build -t netiso360 .
-```
+## Install
 
+Run the prebuild docker image:
 ```sh
 docker run -d \
   --name netiso360 \
@@ -17,5 +18,10 @@ docker run -d \
   --network host \
   -e TZ=Europe/Bucharest \
   -v /path/to/360/isos:/games:ro \
-  netiso360
+  ghcr.io/rursache/netiso_docker_xbox360:master
+```
+
+or build it yourself:
+```sh
+docker build -t netiso360 .
 ```
